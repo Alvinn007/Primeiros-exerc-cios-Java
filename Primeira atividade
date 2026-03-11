@@ -1,1 +1,128 @@
+// Exercicio 1. Soma de quatro números inteiros
+
+import java.util.Scanner;
+
+public class Exercicio1 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.println("Digite quatro números inteiros:");
+        int n1 = teclado.nextInt();
+        int n2 = teclado.nextInt();
+        int n3 = teclado.nextInt();
+        int n4 = teclado.nextInt();
+        
+        int soma = n1 + n2 + n3 + n4;
+        
+        System.out.println("A soma é: " + soma);
+    }
+}
+
+// Exercicio 2. Média Aritmética de três notas
+
+import java.util.Scanner;
+
+public class Exercicio2 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.println("Digite as três notas:");
+        double nota1 = teclado.nextDouble();
+        double nota2 = teclado.nextDouble();
+        double nota3 = teclado.nextDouble();
+        
+        // A média aritmética é a soma dividida pela quantidade
+        double media = (nota1 + nota2 + nota3) / 3;
+        
+        System.out.printf("A média aritmética é: %.2f\n", media);
+    }
+}
+
+//Exercicio 3. Média Ponderada
+
+import java.util.Scanner;
+
+public class Exercicio3 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.print("Nota 1 e Peso 1: ");
+        double nota1 = teclado.nextDouble();
+        double peso1 = teclado.nextDouble();
+        
+        System.out.print("Nota 2 e Peso 2: ");
+        double nota2 = teclado.nextDouble();
+        double peso2 = teclado.nextDouble();
+        
+        System.out.print("Nota 3 e Peso 3: ");
+        double nota3 = teclado.nextDouble();
+        double peso3 = teclado.nextDouble();
+        
+        double media = (nota1 * peso1 + nota2 * peso2 + nota3 * peso3) / (peso1 + peso2 + peso3);
+        
+        System.out.printf("Média Ponderada: %.2f\n", media);
+    }
+}
+//Exercicio 4.Aumento de Salário Fixo (25%)
+
+import java.util.Scanner;
+
+public class Exercicio4 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.print("Digite o salário atual: ");
+        double salarioAntigo = teclado.nextDouble();
+        
+        // Calcular o aumento (25% = 0.25)
+        double aumento = salarioAntigo * 0.25;
+        double novoSalario = salarioAntigo + aumento;
+        
+        System.out.printf("O novo salário com 25%% de aumento é: R$ %.2f\n", novoSalario);
+    }
+}
+
+//Exercicio 5. Salário com Percentual de Aumento Variável
+
+import java.util.Scanner;
+
+public class Exercicio5 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.print("Digite o salário: ");
+        double salario = teclado.nextDouble();
+        
+        System.out.print("Digite o percentual de aumento (ex: 10 para 10%): ");
+        double percentual = teclado.nextDouble();
+        
+        // Cálculo do valor do aumento e do novo salário
+        double valorAumento = salario * (percentual / 100);
+        double novoSalario = salario + valorAumento;
+        
+        System.out.printf("Valor do aumento: R$ %.2f\n", valorAumento);
+        System.out.printf("Novo salário: R$ %.2f\n", novoSalario);
+    }
+}
+
+//Exercicio 6.Salário com Gratificação e Imposto
+
+import java.util.Scanner;
+
+public class Exercicio6 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.print("Digite o salário base: ");
+        double salarioBase = teclado.nextDouble();
+        
+        double gratificacao = salarioBase * 0.05; // 5%
+        double imposto = salarioBase * 0.07;      // 7%
+        
+        double salarioReceber = salarioBase + gratificacao - imposto;
+        
+        System.out.printf("Salário a receber: R$ %.2f\n", salarioReceber);
+    }
+}
+
 
